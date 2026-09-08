@@ -2,8 +2,7 @@
 
 An independent VLSI physical design portfolio project by **Raja Thunga**.
 
-**Current status:** Starter RTL, self-checking testbench, and OpenLane 2 configuration are prepared. Simulation, synthesis, routing, STA, DRC, and LVS have **not been run** in the authoring environment. No timing, area, power, or signoff results are claimed.
-
+**Current status:**RTL simulation passes in GitHub Actions using Icarus Verilog. OpenLane configuration is prepared. Synthesis, placement, CTS, routing, STA, DRC, LVS, and GDSII generation are pending.
 ## Architecture
 Two 32-bit inputs and a 3-bit operation selector feed combinational ALU logic and a registered output. Inputs are sampled on each rising edge when `valid_in` is high. The corresponding result is available after that edge. `valid_out` follows the sampled valid input; the result holds during invalid cycles. Active-high synchronous reset clears both outputs and takes priority over valid.
 
